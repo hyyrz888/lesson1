@@ -1,0 +1,179 @@
+.ht-stepper{
+    display: flex;
+    color: var(--color-text-1);
+    font-size: var(--font-size);
+    line-height: var(--line-height-base);
+    background: var(--color-white);
+
+    .stepper-item{
+        position: relative;
+        display: flex;
+        flex: 1;
+    }
+
+    .stepper-line {
+        position: absolute;
+        overflow: hidden;
+        font-size: 0;
+        border-color: var(--color-neutral-3);
+        border-style: var(--border-style);
+    }
+
+    .stepper-icon{
+        position: relative;
+
+        .ht-icon{
+            width: var(--size-6);
+            height: var(--size-6);
+            color: var(--color-primary);
+            background: var(--color-white);
+        }
+
+        .ht-badge{
+            background: var(--color-primary);
+        }
+    }
+
+    .stepper-content {
+        position: relative;
+        flex: 1;
+        margin: 0 0 0 var(--spacing-small);
+    }
+
+    .stepper-title{
+        color: var(--color-text-1);
+    }
+
+    .stepper-desc{
+        margin: var(--spacing-2) 0 0;
+        color: var(--color-text-3);
+        font-size: var(--font-size-mini);
+        line-height: var(--size-5);
+    }
+
+    &-column{
+        flex-direction: column;
+
+        .stepper-line{
+            top: 0;
+            bottom: 0;
+            width: 0;
+            border-width: 0 0 0 calc(var(--size-1) * 0.25);
+
+            &-icon{
+                left: calc(var(--spacing-6) - 1px);
+            }
+
+            &-badge{
+                left: var(--spacing-1);
+            }
+        }
+
+        .stepper-item{
+            padding: 0 0 var(--spacing-10);
+
+            &:last-child {
+                padding: 0;
+            }
+
+            &-top{
+                align-items: baseline;
+
+                &:first-child{
+                    .stepper-line{
+                        top: calc(var(--font-size) * var(--line-height-base) / 2);
+                    }
+                }
+
+                &:last-child{
+                    .stepper-line{
+                        bottom: calc(100% - var(--font-size) * var(--line-height-base) / 2);
+                    }
+                }
+            }
+
+            &-center{
+                align-items: center;
+
+                &:first-child{
+                    .stepper-line{
+                        top: calc(50% - var(--spacing));
+                    }
+                }
+
+                &:last-child{
+                    .stepper-line{
+                        bottom: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    &-row{
+        flex-direction: row;
+
+        .stepper-line {
+            top: calc(var(--font-size) * var(--line-height-base) / 2 + 1px);
+            height: 0;
+            border-width: calc(var(--size-1) * 0.5) 0 0 0;
+        }
+
+        .stepper-item{
+            &-top{
+                align-items: baseline;
+
+                .stepper-line{
+                    right: var(--spacing-mini);
+
+                    &-icon{
+                        left: var(--spacing-13);
+                    }
+
+                    &-badge{
+                        left: calc(var(--spacing-3) + var(--spacing));
+                    }
+                }
+
+                .stepper-title{
+                    display: inline-block;
+                    padding: 0 var(--spacing-mini) 0 0;
+                    background: var(--color-white);
+                }
+
+                &:last-child{
+                    .stepper-line{
+                        width: 0;
+                    }
+                }
+            }
+
+            &-center{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                .stepper-line{
+                    right: 0;
+                    left: 0;
+                }
+
+                .stepper-content{
+                    margin: var(--spacing) var(--spacing) 0;
+                }
+
+                &:first-child{
+                    .stepper-line{
+                        left: 50%;
+                    }
+                }
+
+                &:last-child{
+                    .stepper-line{
+                        right: 50%;
+                    }
+                }
+            }
+        }
+    }
+}

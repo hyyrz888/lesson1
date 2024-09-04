@@ -1,0 +1,31 @@
+.ht-drawer-box{
+    font-size: var(--font-size);
+    line-height: var(--line-height-base);
+    background: var(--color-bg-2);
+
+    .drawer-box-content{
+        display: none;
+        padding: var(--spacing);
+        color: var(--color-text-2);
+    }
+
+    .drawer-box-append{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .drawer-box-spreadIcon{
+        color: var(--color-text-3);
+    }
+
+    &-spread{
+        .drawer-box-content{
+            display: block;
+        }
+    }
+}
+
+.ht-drawer-box+.ht-drawer-box {
+    margin-top: var(--spacing);
+}

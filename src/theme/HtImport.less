@@ -1,0 +1,46 @@
+.ht-import {
+	&-introduce{
+		margin: 0 0 var(--spacing-small);
+	}
+	&-upload{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: var(--spacing-13);
+		background: var(--color-fill-1);
+		border-radius: var(--size-3);
+		border: 1px dashed var(--color-neutral-3);
+		cursor: pointer;
+		&-active{
+			border-color: var(--color-primary);
+		}
+		&-disabled{
+      cursor: not-allowed;
+		}
+	}
+	&-text{
+		margin: var(--spacing-9) 0 0;
+	}
+	&-button{
+		color: var(--color-primary);
+		cursor: pointer;
+	}
+	&-tips{
+		margin: var(--spacing-mini) 0 0;
+		font-size: var(--font-size-mini);
+		color: var(--color-text-3)
+	}
+	&-template{
+		margin: var(--spacing) 0 0;
+	}
+	&-templateTips{
+		margin: var(--spacing-small) 0 0;
+		color: var(--color-text-2);
+		line-height: var(--size-small);
+	}
+	&-preview{
+		max-height: var(--size-50);
+		margin: var(--spacing-small) 0 0;
+		overflow-y: scroll;
+	}
+}

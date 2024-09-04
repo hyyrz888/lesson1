@@ -1,0 +1,36 @@
+.ht-badge {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: var(--size-5);
+    height: var(--size-5);
+    padding: 0 var(--spacing-3);
+    color: var(--color-white);
+    font-weight: var(--font-weight);
+    font-size: var(--font-size-mini);
+    line-height: var(--size-5);
+    background: var(--color-danger);
+    border-radius: var(--size-5);
+
+    &-dot{
+        width: calc(var(--size-3) * 0.5);
+        min-width: calc(var(--size-3) * 0.5);
+        height: calc(var(--size-3) * 0.5);
+        padding: 0;
+				vertical-align: middle;
+        border-radius: var(--border-radius-circle);
+    }
+}
+
+.ht-badge-box{
+	position: relative;
+	display: block;
+
+	.ht-badge{
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		transform: translate(80%,-50%);
+	}
+}

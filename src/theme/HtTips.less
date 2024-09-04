@@ -1,0 +1,73 @@
+.ht-tips {
+    display: flex;
+    align-items: baseline;
+    box-sizing: border-box;
+    padding: var(--spacing-mini) var(--spacing);
+    overflow: hidden;
+    color: var(--color-text-1);
+    font-size: var(--font-size);
+    line-height: var(--line-height-base);
+		background: var(--color-neutral-2);
+    border-radius: var(--border-radius-small);
+
+		.tips-icon{
+			margin: 0 var(--spacing-mini) 0 0;
+		}
+
+		&-normal{
+			.tips-icon{
+				color: var(--color-text-3);
+			}
+		}
+
+    &-primary, &-loading{
+			background: var(--color-primary-light-1);
+
+			.tips-icon{
+				color: var(--color-primary);
+			}
+    }
+
+    &-success{
+			background: var(--color-success-light-1);
+
+			.tips-icon{
+				color: var(--color-success);
+			}
+    }
+
+    &-warning{
+			background: var(--color-warning-light-1);
+
+			.tips-icon{
+					color: var(--color-warning);
+			}
+    }
+
+    &-danger{
+			background: var(--color-danger-light-1);
+
+			.tips-icon{
+					color: var(--color-danger);
+			}
+    }
+}
+.ht-tips-2{
+	padding: 0;
+	background: none;
+}
+.ht-tips-2.ht-tips-normal{
+	color: var(--color-text-3);
+}
+.ht-tips-2.ht-tips-primary, .ht-tips-2.ht-tips-loading{
+	color: var(--color-primary);
+}
+.ht-tips-2.ht-tips-success{
+	color: var(--color-success);
+}
+.ht-tips-2.ht-tips-warning{
+	color: var(--color-warning);
+}
+.ht-tips-2.ht-tips-danger{
+	color: var(--color-danger);
+}

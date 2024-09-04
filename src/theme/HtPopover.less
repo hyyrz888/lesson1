@@ -1,0 +1,86 @@
+@import url('./variables/component.less');
+
+.ht-popover-popper{
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    max-width: @popover-width;
+    color: var(--color-text-2);
+    font-size: var(--font-size);
+    line-height: var(--line-height-base);
+
+    &-box{
+        background: var(--color-popup-bg);
+        border: 1px solid var(--color-neutral-3);
+        border-radius: var(--border-radius-medium);
+        box-shadow: var(--shadow2-down);
+    }
+
+    &-arrow, &-arrow::before{
+        position: absolute;
+        width: var(--size-2);
+        height: var(--size-2);
+        background: inherit;
+        border: 1px solid var(--color-neutral-3);
+        box-shadow: var(--shadow2-down);
+    }
+
+    &-arrow{
+        visibility: hidden;
+    }
+
+    &-arrow::before{
+        transform: rotate(45deg);
+        visibility: visible;
+        content: '';
+    }
+
+    &-content{
+        box-sizing: border-box;
+        padding: var(--spacing-6) var(--spacing-7);
+        overflow: hidden;
+        background: inherit;
+        border-radius: var(--border-radius-medium);
+    }
+
+    &-tooltip{
+        .ht-popover-popper-box, .ht-popover-popper-arrow, .ht-popover-popper-arrow::before{
+            border: none;
+        }
+
+        .ht-popover-popper-arrow{
+            background: var(--color-tooltip-bg);
+        }
+
+        .ht-popover-popper-content{
+            padding: var(--spacing-4) var(--spacing-6);
+            color: var(--color-white);
+            word-break: break-all;
+            background: var(--color-tooltip-bg);
+        }
+    }
+
+    &-click{
+        animation: fadeIn ease-in-out 0.18s;
+    }
+}
+
+.ht-popover-popper[data-show]{
+    display: block;
+}
+
+.ht-popover-popper[data-popper-placement^='top'] .ht-popover-popper-arrow {
+    bottom: calc(var(--spacing-2) * -1);
+}
+
+.ht-popover-popper[data-popper-placement^='bottom'] .ht-popover-popper-arrow {
+    top: calc(var(--spacing-4) * -0.5);
+}
+
+.ht-popover-popper[data-popper-placement^='left'] .ht-popover-popper-arrow {
+    right: calc(var(--spacing-2) * -1);
+}
+
+.ht-popover-popper[data-popper-placement^='right'] .ht-popover-popper-arrow {
+    left: calc(var(--spacing-4) * -0.5);
+}

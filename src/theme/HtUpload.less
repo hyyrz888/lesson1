@@ -1,0 +1,128 @@
+.ht-upload{
+    font-size: var(--font-size);
+    line-height: var(--line-height-base);
+
+    .upload-input{
+        display: none;
+    }
+
+    .upload-tips{
+        margin: 0 0 var(--spacing-mini);
+        color: var(--color-text-3);
+    }
+
+    .upload-list{
+        display: grid;
+    }
+
+    &-list, &-import{
+        .upload-btn-1{
+            margin: 0 0 var(--spacing-9);
+        }
+
+        .upload-list {
+            gap: var(--spacing-small);
+        }
+
+        .upload-item{
+            width: 100%;
+        }
+
+        .upload-content{
+            display: flex;
+            align-items: center;
+        }
+
+        .upload-info{
+            display: flex;
+            flex: 1;
+            align-items: center;
+            padding: var(--spacing-mini) var(--spacing-5);
+            background: var(--color-fill-1);
+            border-radius: var(--border-radius-small);
+        }
+
+        .upload-fileName{
+            flex: 1;
+            margin: 0 var(--spacing-small) 0 0;
+            color: var(--color-text-1);
+            word-break: break-all;
+        }
+
+        .upload-success{
+            color: var(--color-success);
+        }
+
+        .upload-operation{
+            margin: 0 0 0 var(--spacing-small);
+            color: var(--color-text-2);
+        }
+    }
+
+    &-card{
+        .upload-list {
+            gap: var(--spacing-mini);
+        }
+
+        .upload-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            min-width: var(--spacing-18);
+            height: var(--spacing-18);
+            color: var(--color-text-2);
+            background: var(--color-fill-2);
+            border: 1px dashed var(--color-neutral-3);
+            border-radius: var(--border-radius-small);
+
+            &-disabled {
+                background: var(--color-fill-1);
+                cursor: not-allowed;
+            }
+
+            &:hover:not(.upload-btn-disabled) {
+                background: var(--color-fill-3);
+            }
+        }
+
+        .upload-content{
+            position: relative;
+            min-width: var(--spacing-18);
+            height: var(--spacing-18);
+            background: var(--color-white);
+            border-radius: var(--border-radius-small);
+
+            &:hover {
+                .upload-tools {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .upload-tools{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            color: var(--color-white);
+            background: var(--color-mask-bg);
+            opacity: 0;
+        }
+
+        .upload-tool{
+            min-width: 33%;
+        }
+
+        .upload-fileName{
+            margin: 0 0 var(--spacing-mini);
+            color: var(--color-text-2);
+            text-align: center;
+        }
+    }
+}

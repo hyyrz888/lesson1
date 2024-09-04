@@ -1,0 +1,43 @@
+.ht-bread-crumb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--color-text-3);
+    font-size: var(--font-size);
+    line-height: var(--size-6);
+
+    .crumb-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &-1{
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover{
+                color: var(--color-primary);
+            }
+        }
+
+        &:last-child .crumb-label {
+            margin: 0;
+						color: var(--color-text-2);
+            cursor: default;
+        }
+    }
+
+    .crumb-separator {
+        margin: 0 var(--spacing-5) 0 0;
+        color: var(--color-text-4);
+    }
+
+    .crumb-label{
+        margin: 0 var(--spacing-5) 0 0;
+    }
+
+    .crumb-icon{
+        display: inline-block;
+        color: var(--color-text-4);
+    }
+}

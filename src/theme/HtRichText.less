@@ -1,0 +1,101 @@
+.ht-rich-text {
+  color: var(--color-text-1);
+  font-size: var(--font-size);
+  line-height: var(--line-height-base);
+
+  .rich-text-preview {
+    padding: var(--spacing) var(--spacing-9);
+
+    img,
+    video {
+      max-width: 100%;
+    }
+  }
+
+  .rich-text-box {
+    border: 1px solid var(--color-neutral-3);
+  }
+
+  .rich-text-button {
+    margin: 0 0 var(--spacing);
+  }
+
+  .rich-text-toolbar {
+    border-bottom: 1px solid var(--color-neutral-3);
+  }
+
+  .rich-text-editor {
+    overflow-y: scroll;
+
+    .w-e-text-container img {
+      display: block !important;
+    }
+  }
+
+  li {
+    list-style: revert;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: revert;
+    font-size: revert;
+  }
+
+
+}
+// 预览样式
+.rich-text-preview {
+	/* table 样式 */
+	table {
+		border-top: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+	}
+
+	table td,
+	table th {
+		padding: 3px 5px;
+		border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+
+	table th {
+		text-align: center;
+		background-color: var(--w-e-textarea-slight-bg-color);
+		border-bottom: 2px solid #ccc;
+	}
+
+	/* blockquote 样式 */
+	blockquote {
+		display: block;
+		margin: 10px 0;
+		padding: 5px 10px;
+		font-size: 100%;
+		line-height: 1.4;
+		background-color: #f1f1f1;
+		border-left: 8px solid #d0e5f2;
+	}
+
+	/* code 样式 */
+	code {
+		display: inline-block;
+		margin: 0 3px;
+		padding: 3px 5px;
+		background-color: #f1f1f1;
+		border-radius: 3px;
+	}
+
+	pre code {
+		display: block;
+	}
+
+	/* ul ol 样式 */
+	ul,
+	ol {
+		margin: 10px 0 10px 20px;
+	}
+}

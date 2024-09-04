@@ -1,0 +1,52 @@
+.ht-image {
+    position: relative;
+    display: flex;
+
+    img, video{
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .image-content{
+        font-size: var(--font-size);
+        line-height: var(--line-height-base);
+    }
+
+    .image-title{
+        font-weight: var(--font-weight);
+        font-size: var(--font-size-large);
+    }
+
+    .image-tag{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+    }
+
+    &-loading{
+        min-height: var(--size-20);
+    }
+
+    &-inner{
+        .image-content{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: var(--spacing-small);
+            color: var(--color-white);
+            background: var(--color-mask-bg);
+        }
+    }
+
+    &-outer{
+        flex-direction: column;
+
+        .image-content {
+            padding: var(--spacing-mini) 0;
+        }
+    }
+}

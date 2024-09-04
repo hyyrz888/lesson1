@@ -1,0 +1,49 @@
+@import url('./variables/component.less');
+
+.ht-list{
+	min-height: var(--size-50);
+	background: var(--color-white);
+
+	.list-item{
+		padding: var(--spacing);
+		border-bottom: 1px solid var(--color-neutral-3);
+		img{
+			max-width: 100%;
+			max-height: var(--size-50);
+		}
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+
+	.list-empty{
+		padding: var(--spacing-13) 0;
+	}
+
+	.list-more{
+		display: flex;
+		justify-content: center;
+		padding: var(--spacing-5);
+	}
+
+	.list-loading{
+		position: relative;
+		padding: var(--spacing-large);
+	}
+
+	.list-end{
+		display: flex;
+		justify-content: center;
+		padding: var(--spacing-large);
+		color: var(--color-text-3);
+	}
+
+	&-1{
+		.list-item{
+			padding: var(--spacing);
+			margin: 0 0 var(--spacing);
+			border: 1px solid var(--color-neutral-3);
+			border-radius: var(--border-radius);
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.ht-title{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: var(--font-size);
+    line-height: var(--line-height-base);
+
+    .title-title{
+			margin: 0 var(--spacing-4) 0 0;
+			color: var(--color-text-1);
+			font-weight: var(--font-weight);
+			font-size: var(--font-size-large);
+    }
+
+    .title-description{
+			margin: 0 var(--spacing-4) 0 0;
+			color: var(--color-text-3);
+    }
+
+    .title-append{
+			display: flex;
+			flex: 1;
+			justify-content: flex-end;
+    }
+
+    &-1{
+    	padding: var(--spacing-small) 0;
+			border-bottom: 1px dashed var(--color-neutral-3);
+
+			.title-line{
+				width: calc(var(--size-1) * 0.5);
+				height: var(--size-3);
+				background: var(--color-primary);
+			}
+    }
+}

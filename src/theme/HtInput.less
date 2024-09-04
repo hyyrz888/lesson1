@@ -1,0 +1,175 @@
+.ht-input{
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--color-text-1);
+    font-size: var(--font-size);
+    line-height: var(--line-height-base);
+    background: var(--color-fill-2);
+    border-radius: var(--border-radius-small);
+    cursor: text;
+
+    .input-preview {
+        flex: 1;
+        word-break: break-all;
+    }
+
+		.input-icon{
+			margin: 0 0 0 var(--spacing-mini);
+			cursor: pointer;
+		}
+
+    .input-extra {
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        white-space: nowrap;
+				cursor: pointer;
+
+        &-1 {
+            padding: 0 var(--spacing-small);
+            color: var(--color-text-1);
+            border-right: 1px solid var(--color-neutral-3);
+        }
+
+        &-2 {
+            padding: 0 var(--spacing-small) 0 0;
+            color: var(--color-text-2);
+        }
+
+        &-3 {
+            padding: 0 0 0 var(--spacing-small);
+            color: var(--color-text-2);
+        }
+
+        &-4 {
+            padding: 0 var(--spacing-small);
+            color: var(--color-text-1);
+            border-left: 1px solid var(--color-neutral-3);
+        }
+    }
+
+    .input-content{
+        position: relative;
+        display: inline-flex;
+        flex: 1;
+        align-items: center;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 0 var(--spacing-small);
+        border: 1px solid transparent;
+        border-radius: var(--border-radius-small);
+
+        &-focus:not(.input-content-disabled) {
+            background: var(--color-white);
+            border-color: var(--color-primary);
+
+            .input-text {
+                &:-webkit-autofill{
+                    box-shadow: 0 0 0 1000px var(--color-white) inset!important;
+                }
+            }
+					}
+
+        &-disabled{
+            color: var(--color-text-4);
+            border-color: transparent;
+            cursor: not-allowed;
+
+            .input-extra, .input-text, .input-action{
+							color: var(--color-text-4);
+              cursor: not-allowed;
+            }
+        }
+
+        &:hover:not(.input-content-focus, .input-content-disabled){
+            background: var(--color-fill-3);
+
+             .input-text {
+                &:-webkit-autofill{
+                    box-shadow: 0 0 0 1000px var(--color-fill-3) inset!important;
+                }
+            }
+        }
+    }
+
+    .input-text {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        border-radius: 0;
+        outline: none;
+
+        &:-webkit-autofill{
+            box-shadow: 0 0 0 1000px var(--color-fill-2) inset!important;
+        }
+
+        &:focus{
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .input-action{
+        padding: 0 0 0 var(--spacing-mini);
+
+        &-count{
+            color: var(--color-text-3);
+            font-size: var(--font-size-mini);
+        }
+
+        &-clearable, &-password, &-search{
+            color: var(--color-text-2);
+            cursor: pointer;
+        }
+
+        &-button{
+            margin: -1px calc((var(--spacing-small) + 1px) * -1) -1px -1px;
+            cursor: pointer;
+        }
+    }
+
+    &-text{
+        height: var(--size);
+    }
+
+    &-textarea{
+        .input-content{
+            padding: var(--spacing-2) var(--spacing-small);
+        }
+
+        .input-text{
+            vertical-align: top;
+            resize: vertical;
+        }
+
+        .input-action-count{
+            position: absolute;
+            right: var(--spacing-mini);
+            bottom: var(--spacing-mini);
+        }
+    }
+
+    &-mini{
+        height: var(--size-mini);
+        font-size: var(--font-size-mini);
+    }
+
+    &-small{
+        height: var(--size-small);
+    }
+
+    &-large{
+        height: var(--size-large);
+    }
+
+    &-detail{
+        height: auto;
+        padding: calc(var(--spacing-2) + 1px) 0;
+        background: var(--color-transparent);
+    }
+}

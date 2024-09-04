@@ -1,0 +1,317 @@
+@import url('./variables/component.less');
+
+.ht-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--color-text-1);
+    font-size: var(--font-size);
+    line-height: var(--line-height-base);
+
+    .dialog-box{
+        box-sizing: border-box;
+        background: var(--color-white);
+    }
+
+    .dialog-header{
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        height: var(--size-12);
+        padding: 0 var(--spacing-8);
+        border-bottom: 1px solid var(--color-neutral-3);
+    }
+
+    .dialog-title{
+        display: flex;
+        align-items: center;
+        min-height: var(--size-12);
+        font-weight: var(--font-weight);
+        font-size: var(--font-size-large);
+    }
+
+    .dialog-content{
+        position: relative;
+        padding: var(--spacing-8);
+				box-sizing: border-box;
+				word-wrap: break-word;
+    }
+
+    .dialog-footer{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        padding: var(--spacing-7) var(--spacing-8);
+        border-top: 1px solid var(--color-neutral-3);
+    }
+
+    .dialog-close{
+        position: absolute;
+        top: var(--spacing-9);
+        right: var(--spacing-7);
+        width: var(--size-5);
+        height: var(--size-5);
+        border-radius: var(--border-radius-circle);
+        transform: translateY(-50%);
+
+        &:hover{
+            background-color: var(--color-icon-hover);
+        }
+    }
+
+    .dialog-footer-tips{
+        color: var(--color-text-3);
+    }
+
+    .dialog-buttons{
+        white-space: nowrap;
+        text-align: right;
+    }
+
+    &-info, &-primary, &-success, &-warning, &-danger{
+        .dialog-header{
+            height: unset;
+            padding: var(--spacing-9) var(--spacing-10) 0;
+            border: none;
+        }
+
+        .dialog-content {
+            padding: var(--spacing-9) var(--spacing-10) var(--spacing-10);
+        }
+
+        .dialog-footer{
+            height: unset;
+            padding: 0 var(--spacing-10) var(--spacing-10);
+            border: none;
+        }
+
+        .dialog-buttons {
+            text-align: center;
+        }
+    }
+
+    &-center {
+        justify-content: center;
+
+        .dialog-box {
+            width: @dialog-simple-width;
+            min-width: @dialog-simple-width;
+            max-width: @dialog-simple-max-width;
+            max-height: @dialog-simple-max-height;
+            border-radius: var(--border-radius-medium);
+        }
+
+        .dialog-header{
+            justify-content: center;
+        }
+    }
+
+    &-left, &-right{
+        justify-content: flex-start;
+
+        .dialog-box{
+            width: @dialog-drawer-width;
+            min-width: @dialog-drawer-width;
+            height: 100vh;
+        }
+    }
+
+    &-right{
+        justify-content: flex-end;
+    }
+
+    &-top, &-bottom {
+        align-items: flex-start;
+
+        .dialog-box {
+            width: 100vw;
+            height: @dialog-drawer-height;
+            min-height: @dialog-drawer-height;
+        }
+    }
+
+    &-bottom {
+        align-items: flex-end;
+    }
+
+    &-full{
+        justify-content: center;
+
+        .dialog-box {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .dialog-header{
+            justify-content: center;
+        }
+    }
+
+    &-show{
+        background: var(--color-mask-bg);
+    }
+
+    &-hide{
+        background: transparent;
+    }
+
+    .ht-table-filter {
+        box-shadow: none;
+    }
+}
+
+.ht-dialog-center.ht-dialog-info, .ht-dialog-center.ht-dialog-primary, .ht-dialog-center.ht-dialog-success, .ht-dialog-center.ht-dialog-warning, .ht-dialog-center.ht-dialog-danger{
+    .dialog-box {
+        width: @dialog-notice-width;
+        min-width: @dialog-notice-width;
+    }
+}
+
+.ht-dialog-center.ht-dialog-show .dialog-box, .ht-dialog-full.ht-dialog-show .dialog-box{
+    animation: anim1 0.35s ease forwards;
+}
+
+.ht-dialog-center.ht-dialog-hide .dialog-box, .ht-dialog-full.ht-dialog-hide .dialog-box{
+    animation: anim2 0.35s ease forwards;
+}
+
+.ht-dialog-left.ht-dialog-show .dialog-box{
+    animation: anim3 0.35s ease forwards;
+}
+
+.ht-dialog-left.ht-dialog-hide .dialog-box{
+    animation: anim4 0.35s ease forwards;
+}
+
+.ht-dialog-right.ht-dialog-show .dialog-box{
+    animation: anim5 0.35s ease forwards;
+}
+
+.ht-dialog-right.ht-dialog-hide .dialog-box{
+    animation: anim6 0.35s ease forwards;
+}
+
+.ht-dialog-top.ht-dialog-show .dialog-box{
+    animation: anim7 0.35s ease forwards;
+}
+
+.ht-dialog-top.ht-dialog-hide .dialog-box{
+    animation: anim8 0.35s ease forwards;
+}
+
+.ht-dialog-bottom.ht-dialog-show .dialog-box{
+    animation: anim9 0.35s ease forwards;
+}
+
+.ht-dialog-bottom.ht-dialog-hide .dialog-box{
+    animation: anim10 0.35s ease forwards;
+}
+
+@keyframes anim1 {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes anim2 {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@keyframes anim3 {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes anim4 {
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes anim5 {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes anim6 {
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes anim7 {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes anim8 {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+@keyframes anim9 {
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes anim10 {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}

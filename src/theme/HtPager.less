@@ -1,0 +1,70 @@
+@import url('./variables/component.less');
+
+.ht-pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: var(--font-size);
+  line-height: var(--size);
+
+  .pager-item{
+    display: flex;
+  }
+
+  .pager-total{
+    color: var(--color-text-1);
+  }
+
+  .pager-prev, .pager-next{
+    box-sizing: border-box;
+    min-width: var(--size);
+    height: var(--size);
+    padding: 0 var(--spacing-4);
+    color: var(--color-text-2);
+    border-radius: var(--border-radius-small);
+
+    &:hover:not(.ht-button-disabled){
+      color: var(--color-primary-6);
+      background: var(--color-fill-1);
+    }
+  }
+
+  .pager-number{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    box-sizing: border-box;
+    min-width: var(--size);
+    height: var(--size);
+    margin: 0 var(--spacing-4) 0 0;
+    padding: 0 var(--spacing-4);
+    color: var(--color-text-2);
+    border-radius: var(--border-radius-small);
+
+    &:hover{
+      background: var(--color-fill-1);
+    }
+
+    &-active, &-active:hover{
+      color: var(--color-primary-6);
+      background: var(--color-primary-light-1);
+    }
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  .pager-select{
+    width: var(--size-27);
+  }
+
+  .pager-jumper{
+    width: var(--size-30);
+    color: var(--color-text-3);
+  }
+
+  .u-icon{
+    font-size: var(--font-size-mini);
+  }
+}

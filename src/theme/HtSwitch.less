@@ -1,0 +1,33 @@
+.ht-switch{
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: var(--size-10);
+    height: var(--size-mini);
+    padding: 0 var(--spacing-2);
+    font-size: var(--font-size);
+    vertical-align: sub;
+    background: var(--color-fill-4);
+    border-radius: var(--spacing-small);
+
+    .switch-circle{
+        width: var(--size-4);
+        height: var(--size-4);
+        background: var(--color-white);
+        border-radius: var(--border-radius-circle);
+        transform: translateX(0%);
+    }
+
+    &-active{
+        background: var(--color-primary);
+
+        .switch-circle{
+            transform: translateX(100%);
+        }
+    }
+
+    &-disabled{
+        cursor: not-allowed;
+        opacity: var(--opacity-5);
+    }
+}

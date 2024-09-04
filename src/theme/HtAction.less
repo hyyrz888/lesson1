@@ -1,0 +1,40 @@
+.ht-action {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size);
+    white-space: nowrap;
+
+    .action-item{
+        display: flex;
+        align-items: center;
+
+        &-last{
+            .action-line{
+                visibility: hidden;
+
+                &-show{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .action-line{
+        width: var(--size-none);
+        height: var(--spacing-6);
+        margin: 0 var(--spacing-3);
+        background-color: var(--color-border-3);
+
+        &-show{
+            width: var(--border-1);
+            margin: 0 var(--spacing-6);
+        }
+    }
+
+		&-row{
+			flex-direction: row;
+		}
+		&-row-reverse{
+			flex-direction: row-reverse;
+		}
+}
