@@ -5,7 +5,7 @@
 			11
 		</ht-button>
 
-		<Action></Action>
+		<Action>发布成功</Action>
 		<router-view></router-view>
 	</div>
 </template>
