@@ -17,6 +17,8 @@
 		"@wangeditor/editor-for-vue": "^5.1.11",
 		"browser-md5-file": "^1.1.1",
 		"dayjs": "^1.11.1",
+		"less": "^4.2.0",
+		"less-loader": "^12.2.0",
 		"lodash": "^4.17.21",
 		"qrcode": "^1.5.4",
 		"sortablejs": "^1.15.2",
