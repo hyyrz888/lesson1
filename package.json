@@ -8,6 +8,7 @@
 		"build": "vite build"
 	},
 	"dependencies": {
+		"@arco-design/web-vue": "^2.56.1",
 		"@htfed/base-css": "^1.0.56",
 		"@htfed/utils": "^1.0.28",
 		"@popperjs/core": "^2.11.6",
