@@ -4,9 +4,9 @@ on:
     branches:
       - main
 jobs:
-  build-and-deploy:
-  runs-on: ubuntu-latest
-  steps:
+ build-and-deploy:
+ runs-on: ubuntu-latest # 构建环境使用 ubuntust
+ steps:
       - name: Checkout  # 将代码拉到虚拟机
         uses: actions/lesson1 
         with:
